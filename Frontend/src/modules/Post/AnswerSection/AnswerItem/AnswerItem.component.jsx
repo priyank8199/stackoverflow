@@ -13,7 +13,7 @@ import censorBadWords from "../../../../utils/censorBadWords";
 
 const AnswerItem = ({
   deleteAnswer,
-  answer: { body, user_id, gravatar, id, created_at, username },
+  answer: { body, user_id, gravatar, id, username },
   post: { post },
   auth,
 }) => {
@@ -75,7 +75,6 @@ const AnswerItem = ({
               </div>
             </div>
             <UserCard
-              created_at={created_at}
               user_id={user_id}
               gravatar={gravatar}
               username={username}

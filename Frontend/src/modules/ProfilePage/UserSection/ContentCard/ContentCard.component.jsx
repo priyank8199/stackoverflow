@@ -1,9 +1,8 @@
 import React from "react";
-import moment from "moment";
 
 import './ContentCard.styles.scss';
 
-const ContentCard = ({ username, answers_count, posts_count, comments_count, tags_count, created_at }) => (
+const ContentCard = ({ username, answers_count, posts_count, comments_count, tags_count }) => (
   <div className='content-card'>
     <div className='content-grid'>
       <div className='info-cell'>
@@ -12,10 +11,6 @@ const ContentCard = ({ username, answers_count, posts_count, comments_count, tag
             <h2>{username}</h2>
           </div>
           <div className='date'>
-            <p>
-              user created &nbsp;-&nbsp;
-              {moment(created_at).fromNow(false)}
-            </p>
           </div>
         </div>
       </div>

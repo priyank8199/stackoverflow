@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react';
-import moment from 'moment';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -7,7 +6,7 @@ import PropTypes from 'prop-types';
 import './UserPanel.styles.scss';
 
 const UserPanel = ({
-  user: {id, username, created_at, posts_count, tags_count, views, gravatar},
+  user: {id, username, posts_count, tags_count, views, gravatar},
 }) => {
   return (
     <Fragment>
@@ -50,7 +49,6 @@ const UserPanel = ({
               </span>
             </span>
             <span className='count' style={{fontWeight: '400'}}>
-              {moment(created_at).fromNow(false)}
             </span>
           </span>
         </div>

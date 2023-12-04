@@ -1,5 +1,4 @@
 import React, { useEffect, Fragment, useState } from "react";
-import moment from "moment";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -68,13 +67,6 @@ const CommentCell = ({
                         link={`/users/${comment.user_id}`}
                         display={"inline"}
                       />
-                      <span
-                        title={moment(comment.created_at).fromNow(true)}
-                        style={{ color: "#959ca3 !important" }}
-                        className="date fs-body1"
-                      >
-                        {moment(comment.created_at).fromNow(true)} ago
-                      </span>
                     </div>
                     {!auth.loading &&
                       auth.isAuthenticated &&

@@ -1,5 +1,4 @@
 import React, { useEffect, Fragment } from "react";
-import moment from "moment";
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -39,9 +38,6 @@ const Post = ({ getPost, post: { post, loading } }) => {
         <div className="question-date fc-black-800 pl24">
           <div className="grid-cell">
             <span className="fc-light">Asked</span>
-            <time dateTime={moment(post.created_at).fromNow(true)}>
-              {moment(post.created_at).fromNow(true)} ago
-            </time>
           </div>
         </div>
         <div className="question-main pl24 pt16">
