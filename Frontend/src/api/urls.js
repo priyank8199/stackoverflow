@@ -1,13 +1,13 @@
 import config from "../config";
 
 // Users
-export const usersData = config.BASE_URL + '/api/users';
-export const profileData = config.BASE_URL + '/api/users/{id}';
+export const usersData = '/api/users';
+export const profileData = '/api/users/{id}';
 
 // Auth
-export const loadUserData = config.BASE_URL + '/api/auth';
-export const registerUser = config.BASE_URL + '/api/users';
-export const loginUser = config.BASE_URL + '/api/auth';
+export const loadUserData = '/api/auth';
+export const registerUser = '/api/users';
+export const loginUser = '/api/auth';
 
 // Posts
 export const allPostsData = config.BASE_URL + '/api/posts';
