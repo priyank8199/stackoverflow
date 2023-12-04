@@ -6,7 +6,6 @@ const compression = require('compression');
 const http = require('http');
 const xss = require('xss-clean');
 const cookieParser = require('cookie-parser');
-const path = require('path'); // Add this line
 const debug = require('debug')('backend:server');
 
 const index = require('./src/routers/index');
@@ -37,12 +36,14 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from the 'Frontend/build' directory
-app.use(express.static(path.join(__dirname, '../Frontend/build')));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Frontend/build', 'index.html')); // Fix the path
-});
+// TODO: connection with client setup
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static('client/build'));
+//
+//   app.get('/', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//   });
+// }
 
 // all the api routers
 app.use('/api', index);
