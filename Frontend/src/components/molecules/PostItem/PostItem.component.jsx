@@ -75,7 +75,6 @@ const PostItem = ({
           ))}
         </div>
         <UserCard
-          //created_at={"created_at}
           user_id={user_id}
           gravatar={gravatar}
           username={username}
