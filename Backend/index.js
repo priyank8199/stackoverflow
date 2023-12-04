@@ -21,7 +21,7 @@ app.use(compression());
 app.use(morgan('dev'));
 
 // Get port from environment and store in Express.
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 //app.set('port', PORT);
 
 // cors enable
@@ -37,15 +37,17 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// all the api routers
+app.use('/api', index);
+
 // Serve static files from the 'Frontend/build' directory
 app.use(express.static(path.join(__dirname, '../Frontend/build')));
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend/build', 'index.html')); // Fix the path
 });
 
-// all the api routers
-app.use('/api', index);
+
 
 // index setup
 //const server = http.createServer(app);
