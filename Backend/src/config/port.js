@@ -22,7 +22,7 @@ exports.onError = (error) => {
     throw error;
   }
 
-  const bind = typeof port === 'string' ? `Pipe ${PORT}` : `Port ${PORT}`;
+  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
