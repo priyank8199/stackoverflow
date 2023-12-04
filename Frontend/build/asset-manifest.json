@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8c9eae95.css",
+    "main.js": "/static/js/main.4bff6168.js",
+    "static/media/LogoMd.svg": "/static/media/LogoMd.ad699393c2f6ee1e6247267c82b440b0.svg",
+    "index.html": "/index.html",
+    "static/media/PageSpinner.svg": "/static/media/PageSpinner.53b13299eedfde70726d683794cda605.svg",
+    "static/media/three-dots.svg": "/static/media/three-dots.50b404596b0483a484963b773cf6b2b2.svg",
+    "static/media/Globe.svg": "/static/media/Globe.1f1541dce8f8d38caa4693feaf074502.svg",
+    "static/media/Quote.svg": "/static/media/Quote.b8b9950cba86da0ef48d154dce7c1e35.svg",
+    "static/media/Search.svg": "/static/media/Search.204c2c5087ce6824a2560043605b24f6.svg",
+    "static/media/GitHub.svg": "/static/media/GitHub.5503118f01c925d3472835489d203b09.svg",
+    "static/media/LogoGlyphMd.svg": "/static/media/LogoGlyphMd.c5b7134cdd957ba760a8e6a5691b4421.svg",
+    "static/media/Database.svg": "/static/media/Database.b9910f74ed0a2fdff6cc940060774d04.svg",
+    "static/media/Tags.svg": "/static/media/Tags.722e2110a01ce4475b21437efe8570c5.svg",
+    "static/media/StackExchange.svg": "/static/media/StackExchange.5e2243ef121e98f4f951bb2a178cc4e0.svg",
+    "static/media/Trophy.svg": "/static/media/Trophy.3444ea15a92183147f3c21db61a1a0b7.svg",
+    "static/media/ExternalLink.svg": "/static/media/ExternalLink.64680d27fc0129586931c89443f8ba59.svg",
+    "static/media/Vote.svg": "/static/media/Vote.1eb35d98617886e9dbbde28093d26d44.svg",
+    "static/media/Edit.svg": "/static/media/Edit.076c4116620b05935a57da1efb866cab.svg",
+    "static/media/ArrowDownLg.svg": "/static/media/ArrowDownLg.83b640114bd2ed3c588c3ae8e652619e.svg",
+    "static/media/ArrowUpLg.svg": "/static/media/ArrowUpLg.6e5e437d75805fee0f0a5c5482d0766b.svg",
+    "main.8c9eae95.css.map": "/static/css/main.8c9eae95.css.map",
+    "main.4bff6168.js.map": "/static/js/main.4bff6168.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c9eae95.css",
+    "static/js/main.4bff6168.js"
+  ]
+}
