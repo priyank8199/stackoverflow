@@ -53,9 +53,9 @@ const server = http.createServer(app);
 // Event listener for HTTP server 'listening' event.
 const onListening = () => {
   const address = server.address();
-  const bind = typeof address === 'string' ? `pipe ${address}` : `port ${address.port}`;
-  debug(`Server running on ${bind}, http://localhost:${address.port}`);
-  console.log(`Server running on ${bind}, http://localhost:${address.port}`);
+  const bind = typeof address === 'string' ? `pipe ${address}` : `port ${address.PORT}`;
+  debug(`Server running on ${bind}, http://localhost:${address.PORT}`);
+  console.log(`Server running on ${bind}, http://localhost:${address.PORT}`);
 };
 
 // Listen on provided port, on all network interfaces.
