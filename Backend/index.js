@@ -10,7 +10,7 @@ const path = require('path'); // Add this line
 const debug = require('debug')('backend:server');
 
 const index = require('./src/routers/index');
-//const portUtils = require('./src/config/port');
+const portUtils = require('./src/config/port');
 
 const app = express();
 
@@ -21,8 +21,8 @@ app.use(compression());
 app.use(morgan('dev'));
 
 // Get port from environment and store in Express.
-const PORT = process.env.PORT || 8080;
-//app.set('port', PORT);
+const PORT = portUtils.normalizePort(process.env.PORT || '5000');
+app.set('port', PORT);
 
 // cors enable
 app.use(cors());
@@ -37,30 +37,28 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// all the api routers
-app.use('/api', index);
-
 // Serve static files from the 'Frontend/build' directory
 app.use(express.static(path.join(__dirname, '../Frontend/build')));
 
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend/build', 'index.html')); // Fix the path
 });
 
-
+// all the api routers
+app.use('/api', index);
 
 // index setup
-//const server = http.createServer(app);
+const server = http.createServer(app);
 
 // Event listener for HTTP server 'listening' event.
-// const onListening = () => {
-//   const address = server.address();
-//   const bind = typeof address === 'string' ? `pipe ${address}` : `port ${address.port}`;
-//   debug(`Server running on ${bind}, http://localhost:${address.port}`);
-//   console.log(`Server running on ${bind}, http://localhost:${address.port}`);
-// };
+const onListening = () => {
+  const address = server.address();
+  const bind = typeof address === 'string' ? `pipe ${address}` : `port ${address.port}`;
+  debug(`Server running on ${bind}, http://localhost:${address.port}`);
+  console.log(`Server running on ${bind}, http://localhost:${address.port}`);
+};
 
 // Listen on provided port, on all network interfaces.
-app.listen(PORT, () => console.log(`app is running in PORT: ${PORT}`));
-//server.on('error', portUtils.onError);
-//server.on('listening', () => console.log(`app is running in PORT: ${PORT}`));
+server.listen(PORT);
+server.on('error', portUtils.onError);
+server.on('listening', onListening);
