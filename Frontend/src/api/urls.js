@@ -10,22 +10,22 @@ export const registerUser = '/api/users';
 export const loginUser = '/api/auth';
 
 // Posts
-export const allPostsData = config.BASE_URL + '/api/posts';
-export const singlePostData = config.BASE_URL + '/api/posts/{id}';
-export const allTagPostsData = config.BASE_URL + '/api/posts/tag/{tagName}';
-export const createSinglePost = config.BASE_URL + '/api/posts';
-export const deleteSinglePost = config.BASE_URL + '/api/posts/{id}';
+export const allPostsData = '/api/posts';
+export const singlePostData = '/api/posts/{id}';
+export const allTagPostsData = '/api/posts/tag/{tagName}';
+export const createSinglePost = '/api/posts';
+export const deleteSinglePost = '/api/posts/{id}';
 
 // Answers
-export const allAnswersData = config.BASE_URL + '/api/posts/answers/{id}';
-export const createSingleAnswer = config.BASE_URL + '/api/posts/answers/{postId}';
-export const deleteSingleAnswer = config.BASE_URL + '/api/posts/answers/{AnswerId}';
+export const allAnswersData = '/api/posts/answers/{id}';
+export const createSingleAnswer = '/api/posts/answers/{postId}';
+export const deleteSingleAnswer = '/api/posts/answers/{AnswerId}';
 
 // Comments
-export const allCommentsData = config.BASE_URL + '/api/posts/comments/{id}';
-export const createSingleComment = config.BASE_URL + '/api/posts/comments/{postId}';
-export const deleteSingleComment = config.BASE_URL + '/api/posts/comments/{CommentId}';
+export const allCommentsData = '/api/posts/comments/{id}';
+export const createSingleComment = '/api/posts/comments/{postId}';
+export const deleteSingleComment = '/api/posts/comments/{CommentId}';
 
 // Tags
-export const allTagsData = config.BASE_URL + '/api/tags';
-export const singleTagData = config.BASE_URL + '/api/tags/{tagName}';
+export const allTagsData = '/api/tags';
+export const singleTagData = '/api/tags/{tagName}';
