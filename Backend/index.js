@@ -7,6 +7,7 @@ const http = require('http');
 const xss = require('xss-clean');
 const cookieParser = require('cookie-parser');
 const debug = require('debug')('backend:server');
+const path = require('path');
 
 const index = require('./src/routers/index');
 const portUtils = require('./src/config/port');
@@ -37,13 +38,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // TODO: connection with client setup
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client/build'));
+
+ app.use(express.static(path.join(__dirname, '../Frontend/build')));
 //
-//   app.get('/', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-//   });
-// }
+ app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '../Frontend/build/index.html'));
+   });
+
 
 // all the api routers
 app.use('/api', index);
