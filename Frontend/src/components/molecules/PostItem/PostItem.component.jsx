@@ -24,7 +24,6 @@ const PostItem = ({
     answer_count,
     comment_count,
     views,
-    created_at,
     tags,
   },
 }) => {
@@ -76,7 +75,7 @@ const PostItem = ({
           ))}
         </div>
         <UserCard
-          created_at={created_at}
+          //created_at={"created_at}
           user_id={user_id}
           gravatar={gravatar}
           username={username}
